@@ -81,7 +81,7 @@ class Wordle:
       if letter not in word:
         return False
 
-    set_indices = self.letters[np.where(self.ranks == 2)[0]]
+    set_indices = np.where(self.ranks == 2)[0]
     for index in set_indices:
       if self.letters[index] != word[index]:
         return False
